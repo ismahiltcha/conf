@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Conference</title>
+</head>
+<body>
+    <h1>Create Conference</h1>
+    <h2>Tool that will help your audience appreciate your conference</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+    <p>If you see this message, the template is loaded correctly.</p>
+</body>
+</html>

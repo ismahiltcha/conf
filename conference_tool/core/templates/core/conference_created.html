@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference Created</title>
+</head>
+<body>
+    <h1>Conference Created: {{ conference.title }}</h1>
+    <p>Description: {{ conference.description }}</p>
+    <p>Link: <a href="{{ conference.link }}">{{ conference.link }}</a></p>
+    <h2>QR Code</h2>
+    <img src="{{ conference.qr_code.url }}" alt="QR Code">
+</body>
+</html>

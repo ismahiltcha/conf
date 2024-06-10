@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Dashboard for {{ conference.title }}</h1>
+    <h2>Questions</h2>
+    {% for category, questions in categorized_questions %}
+        <h3>{{ category }}</h3>
+        <ul>
+            {% for question in questions %}
+                <li>{{ question.text }} - {{ question.created_at }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+{% endblock %}
